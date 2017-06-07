@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  WeatherViewController.swift
 //  NorthWind
 //
 //  Created by Chandan Sarkar on 07.06.17.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class WeatherViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
