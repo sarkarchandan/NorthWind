@@ -11,10 +11,10 @@ import Alamofire
 
 class CurrentWeather{
     
-    var _currentCityName: String!
-    var _currentDate: String!
-    var _currentWeatherCondition: String!
-    var _currentTemperature: Double!
+    private var _currentCityName: String!
+    private var _currentDate: String!
+    private var _currentWeatherCondition: String!
+    private var _currentTemperature: Double!
     
     var currentCityName: String {
         get{
@@ -33,7 +33,7 @@ class CurrentWeather{
         get{
             let dateFormatter = DateFormatter()
             dateFormatter.dateStyle = .medium
-            dateFormatter.timeStyle = .short
+            dateFormatter.timeStyle = .none
             let date = dateFormatter.string(from: Date())
             self._currentDate = "Today \(date)"
             return _currentDate
@@ -70,11 +70,10 @@ class CurrentWeather{
         let currentWeatherUrl = URL(string: CURRENT_WEATHER_URL)!
         Alamofire.request(currentWeatherUrl).responseJSON { response in
             
-            let result = response.result
-            //Starting to parse the JSON response
+            //Parsing the JSON Response
             
             //Optional casting the result as a Disctionary
-            if let weatherDataDictionary = result.value as? Dictionary<String,Any>{
+            if let weatherDataDictionary = response.result.value as? Dictionary<String,Any>{
                 //Optional and extracting the city name from the Dictionary with the key name
                 if let cityName = weatherDataDictionary["name"] as? String{
                     

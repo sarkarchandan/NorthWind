@@ -23,16 +23,16 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kOw-LF-5fs">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="300"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="240"/>
                                 <subviews>
-                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="24" translatesAutoresizingMaskIntoConstraints="NO" id="bU1-sh-f97">
-                                        <rect key="frame" x="20" y="20" width="280" height="260"/>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="40" translatesAutoresizingMaskIntoConstraints="NO" id="bU1-sh-f97">
+                                        <rect key="frame" x="20" y="20" width="280" height="200"/>
                                         <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="gH0-s5-6PQ">
-                                                <rect key="frame" x="0.0" y="0.0" width="128" height="260"/>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="top" spacing="42" translatesAutoresizingMaskIntoConstraints="NO" id="gH0-s5-6PQ">
+                                                <rect key="frame" x="0.0" y="2" width="120" height="196.5"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Today June 7, 2017" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SI1-nF-11D">
-                                                        <rect key="frame" x="0.0" y="0.0" width="106.5" height="58.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="106.5" height="16.5"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="12"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -41,7 +41,7 @@
                                                         </variation>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="80.6 °" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ypf-cq-PJE">
-                                                        <rect key="frame" x="0.0" y="100.5" width="128" height="59"/>
+                                                        <rect key="frame" x="0.0" y="58.5" width="120" height="68.5"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="50"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -50,7 +50,7 @@
                                                         </variation>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bamberg" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbq-yC-2Za">
-                                                        <rect key="frame" x="0.0" y="201.5" width="85" height="58.5"/>
+                                                        <rect key="frame" x="0.0" y="169" width="85" height="27.5"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -59,13 +59,13 @@
                                                         </variation>
                                                     </label>
                                                 </subviews>
-                                                <variation key="heightClass=regular-widthClass=regular" spacing="98"/>
+                                                <variation key="heightClass=regular-widthClass=regular" spacing="50"/>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="FxP-aF-pmA">
-                                                <rect key="frame" x="152" y="63" width="128" height="134"/>
+                                                <rect key="frame" x="160" y="33" width="120" height="134"/>
                                                 <subviews>
                                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Clear" translatesAutoresizingMaskIntoConstraints="NO" id="T4r-sd-II7">
-                                                        <rect key="frame" x="10.5" y="0.0" width="107" height="107"/>
+                                                        <rect key="frame" x="6.5" y="0.0" width="107" height="107"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="107" id="24O-hP-G00">
                                                                 <variation key="heightClass=regular-widthClass=regular" constant="150"/>
@@ -76,7 +76,7 @@
                                                         </constraints>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shiny" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvJ-lC-2EL">
-                                                        <rect key="frame" x="44.5" y="112" width="39.5" height="22"/>
+                                                        <rect key="frame" x="40.5" y="112" width="39.5" height="22"/>
                                                         <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="16"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -100,8 +100,8 @@
                                     <constraint firstAttribute="bottom" secondItem="bU1-sh-f97" secondAttribute="bottom" constant="20" id="NP8-66-SSA">
                                         <variation key="heightClass=regular-widthClass=regular" constant="50"/>
                                     </constraint>
-                                    <constraint firstAttribute="height" constant="300" id="We2-bp-nBb">
-                                        <variation key="heightClass=regular-widthClass=regular" constant="500"/>
+                                    <constraint firstAttribute="height" constant="240" id="We2-bp-nBb">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="400"/>
                                     </constraint>
                                     <constraint firstAttribute="trailing" secondItem="bU1-sh-f97" secondAttribute="trailing" constant="20" id="sxP-Kg-vgx">
                                         <variation key="heightClass=regular-widthClass=regular" constant="50"/>
@@ -109,10 +109,10 @@
                                 </constraints>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="76" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Tr1-BY-UD2">
-                                <rect key="frame" x="0.0" y="300" width="320" height="268"/>
+                                <rect key="frame" x="0.0" y="240" width="320" height="328"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="dailyForcastCell" rowHeight="76" id="1yr-ve-qhl">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="dailyForcastCell" rowHeight="76" id="1yr-ve-qhl" customClass="WeatherForecastTableViewCell" customModule="NorthWind" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="320" height="76"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="1yr-ve-qhl" id="DGr-My-GMW">
@@ -177,6 +177,13 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <inset key="separatorInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                        <connections>
+                                            <outlet property="dayLabelOutlet" destination="Cf7-ec-bcN" id="6cE-ro-E6L"/>
+                                            <outlet property="highTemperatureLabelOutlet" destination="GX8-Z4-FCW" id="KsY-M0-ts6"/>
+                                            <outlet property="lowTemperatureLabelOutlet" destination="f4Y-NC-6xg" id="uiZ-an-OeZ"/>
+                                            <outlet property="weatherConditionImageOutlet" destination="5af-CS-zuH" id="u2B-5W-PVZ"/>
+                                            <outlet property="weatherConditionLabelOutlet" destination="8A1-vK-HOz" id="iUD-A4-lHN"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
