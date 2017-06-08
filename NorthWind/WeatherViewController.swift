@@ -21,17 +21,19 @@ class WeatherViewController: UIViewController, UITableViewDelegate,UITableViewDa
     
     @IBOutlet weak var weatherForecastTableViewOutlet: UITableView!
     
+    var currentWeather: CurrentWeather!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         weatherForecastTableViewOutlet.delegate = self
         weatherForecastTableViewOutlet.dataSource = self
+        
+        currentWeather = CurrentWeather()
+        
+        currentWeather.downloadCurrentWeatherDetails {
+            self.updateWeatherCondition()
+        }
     }
-    
-    
-//    func numberOfSections(in tableView: UITableView) -> Int {
-//        return 1
-//    }
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -43,6 +45,14 @@ class WeatherViewController: UIViewController, UITableViewDelegate,UITableViewDa
         return cell
     }
     
+    func updateWeatherCondition(){
+        currentDateLabelOutlet.text = self.currentWeather.currentDate
+        currentDateTemperatureOutlet.text = "\(self.currentWeather.currentTemperature)"
+        locationLabelOutlet.text = self.currentWeather.currentCityName
+        currentWeatherConditionLabelOutlet.text = self.currentWeather.currentWeatherCondition
+        //This is possible because our image assets are cleverly named to go well with weather states
+        currentWeatherConditionImageViewOutlet.image = UIImage(named: self.currentWeather.currentWeatherCondition)
+    }
 
 
 }

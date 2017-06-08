@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		174D10A31EE95042001AEDFC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174D10A21EE95042001AEDFC /* Constants.swift */; };
+		174D10A51EE95900001AEDFC /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174D10A41EE95900001AEDFC /* CurrentWeather.swift */; };
 		17EA6A281EE7789B006E9ACC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EA6A271EE7789B006E9ACC /* AppDelegate.swift */; };
 		17EA6A2A1EE7789B006E9ACC /* WeatherViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EA6A291EE7789B006E9ACC /* WeatherViewController.swift */; };
 		17EA6A2D1EE7789B006E9ACC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 17EA6A2B1EE7789B006E9ACC /* Main.storyboard */; };
@@ -17,6 +19,8 @@
 
 /* Begin PBXFileReference section */
 		06DDD5D876CEB067BC369576 /* Pods-NorthWind.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NorthWind.release.xcconfig"; path = "Pods/Target Support Files/Pods-NorthWind/Pods-NorthWind.release.xcconfig"; sourceTree = "<group>"; };
+		174D10A21EE95042001AEDFC /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		174D10A41EE95900001AEDFC /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
 		17EA6A241EE7789B006E9ACC /* NorthWind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NorthWind.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		17EA6A271EE7789B006E9ACC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		17EA6A291EE7789B006E9ACC /* WeatherViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewController.swift; sourceTree = "<group>"; };
@@ -58,6 +62,7 @@
 		17775F521EE8864100A7F69A /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				174D10A41EE95900001AEDFC /* CurrentWeather.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -87,6 +92,7 @@
 				17775F511EE8863A00A7F69A /* View */,
 				17775F501EE8863100A7F69A /* Controller */,
 				17EA6A271EE7789B006E9ACC /* AppDelegate.swift */,
+				174D10A21EE95042001AEDFC /* Constants.swift */,
 				17EA6A2B1EE7789B006E9ACC /* Main.storyboard */,
 				17EA6A2E1EE7789B006E9ACC /* Assets.xcassets */,
 				17EA6A301EE7789B006E9ACC /* LaunchScreen.storyboard */,
@@ -237,6 +243,8 @@
 			files = (
 				17EA6A2A1EE7789B006E9ACC /* WeatherViewController.swift in Sources */,
 				17EA6A281EE7789B006E9ACC /* AppDelegate.swift in Sources */,
+				174D10A51EE95900001AEDFC /* CurrentWeather.swift in Sources */,
+				174D10A31EE95042001AEDFC /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
