@@ -8,17 +8,41 @@
 
 import UIKit
 
-class WeatherViewController: UIViewController {
+class WeatherViewController: UIViewController, UITableViewDelegate,UITableViewDataSource{
+    
+    @IBOutlet weak var currentDateLabelOutlet: UILabel!
+    @IBOutlet weak var currentDateTemperatureOutlet: UILabel!
+    
+    @IBOutlet weak var locationLabelOutlet: UILabel!
+    
+    @IBOutlet weak var currentWeatherConditionImageViewOutlet: UIImageView!
+    
+    @IBOutlet weak var currentWeatherConditionLabelOutlet: UILabel!
+    
+    @IBOutlet weak var weatherForecastTableViewOutlet: UITableView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        weatherForecastTableViewOutlet.delegate = self
+        weatherForecastTableViewOutlet.dataSource = self
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    
+//    func numberOfSections(in tableView: UITableView) -> Int {
+//        return 1
+//    }
+    
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 6
     }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "dailyForcastCell",for: indexPath)
+        return cell
+    }
+    
 
 
 }
