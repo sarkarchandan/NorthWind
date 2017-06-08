@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		174D10A31EE95042001AEDFC /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174D10A21EE95042001AEDFC /* Constants.swift */; };
 		174D10A51EE95900001AEDFC /* CurrentWeather.swift in Sources */ = {isa = PBXBuildFile; fileRef = 174D10A41EE95900001AEDFC /* CurrentWeather.swift */; };
+		17851DFB1EE9FC41003371B6 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17851DFA1EE9FC41003371B6 /* Constants.swift */; };
 		17A3F2F71EE9D0870042A1FD /* WeatherForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A3F2F61EE9D0870042A1FD /* WeatherForecast.swift */; };
 		17A3F2F91EE9D38D0042A1FD /* WeatherForecastTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17A3F2F81EE9D38D0042A1FD /* WeatherForecastTableViewCell.swift */; };
 		17EA6A281EE7789B006E9ACC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17EA6A271EE7789B006E9ACC /* AppDelegate.swift */; };
@@ -21,8 +21,8 @@
 
 /* Begin PBXFileReference section */
 		06DDD5D876CEB067BC369576 /* Pods-NorthWind.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NorthWind.release.xcconfig"; path = "Pods/Target Support Files/Pods-NorthWind/Pods-NorthWind.release.xcconfig"; sourceTree = "<group>"; };
-		174D10A21EE95042001AEDFC /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		174D10A41EE95900001AEDFC /* CurrentWeather.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeather.swift; sourceTree = "<group>"; };
+		17851DFA1EE9FC41003371B6 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		17A3F2F61EE9D0870042A1FD /* WeatherForecast.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherForecast.swift; sourceTree = "<group>"; };
 		17A3F2F81EE9D38D0042A1FD /* WeatherForecastTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherForecastTableViewCell.swift; sourceTree = "<group>"; };
 		17EA6A241EE7789B006E9ACC /* NorthWind.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NorthWind.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,7 +98,7 @@
 				17775F511EE8863A00A7F69A /* View */,
 				17775F501EE8863100A7F69A /* Controller */,
 				17EA6A271EE7789B006E9ACC /* AppDelegate.swift */,
-				174D10A21EE95042001AEDFC /* Constants.swift */,
+				17851DFA1EE9FC41003371B6 /* Constants.swift */,
 				17EA6A2B1EE7789B006E9ACC /* Main.storyboard */,
 				17EA6A2E1EE7789B006E9ACC /* Assets.xcassets */,
 				17EA6A301EE7789B006E9ACC /* LaunchScreen.storyboard */,
@@ -251,8 +251,8 @@
 				17A3F2F71EE9D0870042A1FD /* WeatherForecast.swift in Sources */,
 				17EA6A281EE7789B006E9ACC /* AppDelegate.swift in Sources */,
 				174D10A51EE95900001AEDFC /* CurrentWeather.swift in Sources */,
-				174D10A31EE95042001AEDFC /* Constants.swift in Sources */,
 				17A3F2F91EE9D38D0042A1FD /* WeatherForecastTableViewCell.swift in Sources */,
+				17851DFB1EE9FC41003371B6 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
