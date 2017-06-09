@@ -75,8 +75,6 @@ class WeatherForecast{
             dateFormatter.dateFormat = "EEEE"
             dateFormatter.timeStyle = .none
             forecastDay = unixConvertedDate.dayOfTheWeek()
-            
-            print("Day: \(forecastDay)")
         }
         
         //Getting the Max and Min temperature
@@ -85,21 +83,17 @@ class WeatherForecast{
             //Getting High temperature
             if let highTemperature = temperatureDictionary["max"] as? Double{
                 
-                let kelvinToFarenheitPreDivisionForHigh = (highTemperature * (9/5) - 459.67)
-                let kelvinToFarenheitForHigh = Double(round(10 * kelvinToFarenheitPreDivisionForHigh/10))
-                highTemperatureConstraint = "\(kelvinToFarenheitForHigh)°"
-                
-                print("High: \(highTemperatureConstraint)")
+//                let kelvinToFarenheitPreDivisionForHigh = (highTemperature * (9/5) - 459.67)
+//                let kelvinToFarenheitForHigh = Double(round(10 * kelvinToFarenheitPreDivisionForHigh/10))
+                highTemperatureConstraint = "\((highTemperature - 273).roundTo(places: 1))°"
             }
             
             //Getting Low temperature
             if let lowTemperature = temperatureDictionary["min"] as? Double {
 
-                let kelvinToFarenheitPreDivisionForLow = (lowTemperature * (9/5) - 459.67)
-                let kelvinToFarenheitForLow = Double(round(10 * kelvinToFarenheitPreDivisionForLow/10))
-                lowTemperatureConstraint = "\(kelvinToFarenheitForLow)°"
-                
-                print("Low: \(lowTemperatureConstraint)")
+//                let kelvinToFarenheitPreDivisionForLow = (lowTemperature * (9/5) - 459.67)
+//                let kelvinToFarenheitForLow = Double(round(10 * kelvinToFarenheitPreDivisionForLow/10))
+                lowTemperatureConstraint = "\((lowTemperature - 273).roundTo(places: 1))°"
             }
             
             //Getting Weather condition
@@ -108,10 +102,7 @@ class WeatherForecast{
                 let weatherConditionDictionary = weatherConditionArray[0]
                 
                 if let weatherCondition = weatherConditionDictionary["main"] as? String{
-                    
                     forecastWeatherCondition = weatherCondition
-                    
-                    print("Weather Condition: \(forecastWeatherCondition)")
                 }
             }
         }

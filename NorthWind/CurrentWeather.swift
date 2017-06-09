@@ -98,15 +98,23 @@ class CurrentWeather{
                 if let coreWeatherProperties = weatherDataDictionary["main"] as? Dictionary<String,Any>{
                     //Optional casting contet with the key temp inside the content for the key main
                     if let currentTemperature = coreWeatherProperties["temp"] as? Double{
-                        let kelvinToFarenheitPreDivision = (currentTemperature * (9/5) - 459.67)
-                        let kelvinToFarenheit = Double(round(10 * kelvinToFarenheitPreDivision/10))
+//                        let kelvinToFarenheitPreDivision = (currentTemperature * (9/5) - 459.67)
+//                        let kelvinToFarenheit = Double(round(10 * kelvinToFarenheitPreDivision/10))
                         
                         //Calling the setter
-                        self.currentTemperature = kelvinToFarenheit
+                        self.currentTemperature =  (currentTemperature - 273).roundTo(places: 1)
                     }
                 }
             }
             completed()
         }
+    }
+}
+
+extension Double {
+    /// Rounds the double to decimal places value
+    func roundTo(places:Int) -> Double {
+        let divisor = pow(10.0, Double(places))
+        return (self * divisor).rounded() / divisor
     }
 }

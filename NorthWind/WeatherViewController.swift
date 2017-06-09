@@ -8,8 +8,10 @@
 
 import UIKit
 import Alamofire
+import CoreLocation
 
-class WeatherViewController: UIViewController, UITableViewDelegate,UITableViewDataSource{
+
+class WeatherViewController: UIViewController, UITableViewDelegate,UITableViewDataSource, CLLocationManagerDelegate{
     
     @IBOutlet weak var currentDateLabelOutlet: UILabel!
     @IBOutlet weak var currentDateTemperatureOutlet: UILabel!
@@ -22,6 +24,11 @@ class WeatherViewController: UIViewController, UITableViewDelegate,UITableViewDa
     
     @IBOutlet weak var weatherForecastTableViewOutlet: UITableView!
     
+    //Creating the LocationManager
+    let locationManager = CLLocationManager()
+    var currentLocation: CLLocation!
+    
+    
     var currentWeather: CurrentWeather!
     
     var weatherForecastArray = [WeatherForecast]()
@@ -30,17 +37,16 @@ class WeatherViewController: UIViewController, UITableViewDelegate,UITableViewDa
         super.viewDidLoad()
         weatherForecastTableViewOutlet.delegate = self
         weatherForecastTableViewOutlet.dataSource = self
+        //Designating the current ViewController to act as LocationManagerDelegate
+        locationManager.delegate = self
+        //We want the accuracy of the LocationManager to be best
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        //We want to ask for authorization from the user when to access the location when the app is active
+        //This is best options sicne we need to take the privacy and security of the user into account
+        locationManager.requestWhenInUseAuthorization()
+        //To keep track of any significant GPS changes
+        locationManager.startMonitoringSignificantLocationChanges()
         
-        currentWeather = CurrentWeather()
-        
-        currentWeather.downloadCurrentWeatherDetails {
-            self.updateWeatherCondition()
-        }
-        print(FORECAST_WEATHER_URL)
-        
-        self.downloadWeatherForecastData {
-            //TODO
-        }
     }
     
     //We pass on the no of items that we need to display
@@ -93,6 +99,36 @@ class WeatherViewController: UIViewController, UITableViewDelegate,UITableViewDa
             }
             completed()
         }
+    }
+    
+    //Inside this function we want to ask for the user authorization if not authrized already
+    func locationAuthStatus(){
+        if CLLocationManager.authorizationStatus() == .authorizedWhenInUse{
+            //This is what happens when we are authorized already i.e. to determine the location
+            
+            //Storing the current location into CLLocation type variable
+            currentLocation = locationManager.location
+            //Pulling the Latitude and Longitude and storing inside the Singleton class into shardLocation
+            Location.sharedLocation.latitude = currentLocation.coordinate.latitude
+            Location.sharedLocation.longitude = currentLocation.coordinate.longitude
+            currentWeather = CurrentWeather()
+            currentWeather.downloadCurrentWeatherDetails {
+                self.downloadWeatherForecastData {
+                    self.updateWeatherCondition()
+                }
+            }
+            
+        }else{
+            locationManager.requestWhenInUseAuthorization()
+            locationAuthStatus()
+        }
+    }
+    
+    //we want the authorisation procedure to take place before our app tries to pull weather data from the
+    //server. This is crucila for accuracy
+    override func viewDidAppear(_ animated: Bool) {
+        super .viewDidAppear(animated)
+        locationAuthStatus()
     }
 }
 
