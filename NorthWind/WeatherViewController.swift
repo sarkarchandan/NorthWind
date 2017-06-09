@@ -113,10 +113,10 @@ class WeatherViewController: UIViewController, UITableViewDelegate,UITableViewDa
             Location.sharedLocation.longitude = currentLocation.coordinate.longitude
             currentWeather = CurrentWeather()
             currentWeather.downloadCurrentWeatherDetails {
-                self.downloadWeatherForecastData {
-                    self.updateWeatherCondition()
-                }
+                self.updateWeatherCondition()
             }
+            
+            self.downloadWeatherForecastData {}
             
         }else{
             locationManager.requestWhenInUseAuthorization()
