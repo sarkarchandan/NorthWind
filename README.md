@@ -3,7 +3,7 @@
 ##### This is a simple iOS application created as part of learning experience. NorthWind accesses the location of the device and shows the current weather information and weather forecast for coming few days. This application uses the weather data offered by [OpenWeatherMap](https://openweathermap.org). It also uses the CocoaPods in order to leverage the capabilities offered by the library AlamoFire for performing network operations asynchronously. Efforts have been made to create a responsive design that works across iPhones and iPads. More improvements on the features and design is underway.
 
 * Platform : iOS
-* Build Environment: Xcode
+* Build Environment: Xcode 8
 * Build Language: Swift 3.0
 
 ##### Used Libraries 
