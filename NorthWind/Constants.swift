@@ -17,7 +17,7 @@ let APP_ID = "&appid="
 let FORECAST_COUNT = "&cnt=11"
 
 //Put your API key here.
-let API_KEY = "Your API Key Goes Here"
+let API_KEY = "Your API key Goes Here"
 
 let CURRENT_WEATHER_URL = "\(BASE_URL)\(CURRENT)\(LATITUDE)\(Location.sharedLocation.latitude!)\(LONGITUDE)\(Location.sharedLocation.longitude!)\(APP_ID)\(API_KEY)"
 let FORECAST_WEATHER_URL = "\(BASE_URL)\(FORECAST)\(LATITUDE)\(Location.sharedLocation.latitude!)\(LONGITUDE)\(Location.sharedLocation.longitude!)\(APP_ID)\(API_KEY)\(FORECAST_COUNT)"
